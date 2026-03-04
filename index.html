@@ -210,7 +210,7 @@ button { cursor: pointer; font-family: var(--font); }
 <div id="login-screen">
   <div class="login-card">
     <div class="login-logo">
-      <img src="data:image/jpeg;base64,$(cat /tmp/jp-logo-b64.txt)" alt="Journey Pediatrics" style="height:80px;width:auto;">
+      <svg width="80" height="80" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="48" fill="#FBF9F7" stroke="#D8896A" stroke-width="2"/><path d="M50 20c-8 0-15 6-18 14-2 5-1 10 2 14l16 22 16-22c3-4 4-9 2-14-3-8-10-14-18-14z" fill="#6CC5C3" opacity=".85"/><path d="M50 20c-4 0-8 2-11 5 3-1 7-1 11 1s8-1 11-1c-3-3-7-5-11-5z" fill="#D8896A" opacity=".7"/><ellipse cx="44" cy="38" rx="2.5" ry="3" fill="#fff"/><ellipse cx="56" cy="38" rx="2.5" ry="3" fill="#fff"/><path d="M46 46c2 2 6 2 8 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
       <h1>Journey Pediatrics</h1>
       <p>Contour™ Symptom Tracker</p>
     </div>
@@ -238,7 +238,7 @@ button { cursor: pointer; font-family: var(--font); }
   <!-- Topbar -->
   <div class="topbar">
     <div class="topbar-brand">
-      <img src="data:image/jpeg;base64,$(cat /tmp/jp-logo-b64.txt)" alt="Journey Pediatrics" style="height:36px;width:auto;">
+      <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="48" fill="#FBF9F7" stroke="#D8896A" stroke-width="2"/><path d="M50 20c-8 0-15 6-18 14-2 5-1 10 2 14l16 22 16-22c3-4 4-9 2-14-3-8-10-14-18-14z" fill="#6CC5C3" opacity=".85"/><path d="M50 20c-4 0-8 2-11 5 3-1 7-1 11 1s8-1 11-1c-3-3-7-5-11-5z" fill="#D8896A" opacity=".7"/><ellipse cx="44" cy="38" rx="2.5" ry="3" fill="#fff"/><ellipse cx="56" cy="38" rx="2.5" ry="3" fill="#fff"/><path d="M46 46c2 2 6 2 8 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
       Journey Pediatrics
     </div>
     <div class="topbar-right">
@@ -542,7 +542,7 @@ function initCharts() {
       },
       plugins: {
         legend: { display: false },
-        ...(window.ChartjsPluginAnnotation ? {annotation: { annotations: treatmentAnnotations() }} : {}),
+        annotation: { annotations: treatmentAnnotations() },
         tooltip: { backgroundColor: '#1A2B3C', titleFont: {size: 13}, bodyFont: {size: 12}, padding: 12, cornerRadius: 8 }
       }
     }
@@ -568,7 +568,7 @@ function initCharts() {
       },
       plugins: {
         legend: { display: false },
-        ...(window.ChartjsPluginAnnotation ? {annotation: { annotations: treatmentAnnotations() }} : {}),
+        annotation: { annotations: treatmentAnnotations() },
         tooltip: { mode: 'index', intersect: false, backgroundColor: '#1A2B3C', titleFont: {size: 13}, bodyFont: {size: 12}, padding: 12, cornerRadius: 8 }
       },
       interaction: { mode: 'index', intersect: false }
